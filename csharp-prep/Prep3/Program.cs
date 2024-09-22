@@ -9,21 +9,26 @@ class Program
         string magicNumberInText = Console.ReadLine();
         int magicNumber = int.Parse(magicNumberInText);
 
-        Console.Write("What is your guess? ");
-        string guessInText = Console.ReadLine();
-        int guess = int.Parse(guessInText);
+        int guess = 0;
 
-        if (magicNumber == guess)
+        while (guess != magicNumber)
         {
-            Console.WriteLine("You guessed it!");
-        }
-        else if (magicNumber > guess)
-        {
+            Console.Write("What is your guess? ");
+            string guessInText = Console.ReadLine();
+            guess = int.Parse(guessInText);
+
+            if (magicNumber > guess)
+            {
             Console.WriteLine("Higher");
-        }
-        else
-        {
+            }
+            else if (magicNumber < guess)
+            {
             Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You guessed it!");
+            }
         }
     }
 }
