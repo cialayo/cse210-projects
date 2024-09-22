@@ -11,23 +11,32 @@ class Program
 
         if (gradeInPercentage >= 90)
         {
-            Console.Write("You've got an A");
+            Console.WriteLine("You've got an A");
         }
         else if (gradeInPercentage < 90 && gradeInPercentage >= 80)
         {
-            Console.Write("You've got a B");
+            Console.WriteLine("You've got a B");
         }
         else if (gradeInPercentage < 80 && gradeInPercentage >= 70)
         {
-            Console.Write("You've got a C");
+            Console.WriteLine("You've got a C");
         }
         else if (gradeInPercentage < 70 && gradeInPercentage >= 60)
         {
-            Console.Write("You've got a D");
+            Console.WriteLine("You've got a D");
         }
         else
         {
-            Console.Write("You've got an F");
+            Console.WriteLine("You've got an F");
+
+        }
+        if (gradeInPercentage >= 70)
+        {
+            Console.Write("Congratulations you have passed the course!!!");
+        }
+        else
+        {
+            Console.Write("You'll do it better next time");
 
         }
     }
