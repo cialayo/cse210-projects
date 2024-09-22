@@ -5,9 +5,13 @@ class Program
     static void Main(string[] args)
     {
         // Guess My Number game
-        Console.Write("What is the magic number? ");
-        string magicNumberInText = Console.ReadLine();
-        int magicNumber = int.Parse(magicNumberInText);
+        
+        //Console.Write("What is the magic number? ");
+        //string magicNumberInText = Console.ReadLine();
+        //int magicNumber = int.Parse(magicNumberInText);
+
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
 
         int guess = 0;
 
