@@ -12,5 +12,20 @@ class Program
 
         job1.Display();
 
+        Job job2 = new Job();
+        job2._company = "Javidowsky";
+        job2._jobTitle = "Manager";
+        job2._startYear = 2022;
+        job2._endYear = 2028;
+
+        job2.Display();
+
+        Resume myResume = new Resume();
+        myResume._name = "Cristobal Alayo";
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
+
     }
 }
