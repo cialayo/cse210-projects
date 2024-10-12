@@ -22,7 +22,7 @@ class Program
             {
                 PromptGenerator prompt1 = new PromptGenerator();
                 string randomPrompt = prompt1.GetRandomPrompt();
-                //Console.WriteLine(randomPrompt);
+
                 DateTime theCurrentTime = DateTime.Now;
                 string dateText = theCurrentTime.ToShortDateString();
                 entry1._date = dateText;
