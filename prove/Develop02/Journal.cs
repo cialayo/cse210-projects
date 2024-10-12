@@ -3,7 +3,7 @@ public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
     public Journal()
-    {        
+    {
     }
     public void AddEntry(Entry newEntry)
     {
@@ -11,7 +11,8 @@ public class Journal
     }
     public void DisplayAll()
     {
-        foreach (Entry _entry in _entries){
+        foreach (Entry _entry in _entries)
+        {
             _entry.Display();
         }
     }
@@ -28,6 +29,7 @@ public class Journal
     }
     public void LoadFromFile(string file)
     {
+        _entries.Clear();
         string[] lines = System.IO.File.ReadAllLines(file);
         foreach (string line in lines)
         {

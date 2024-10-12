@@ -30,7 +30,6 @@ class Program
                 Console.Write(entry1._promptText);
                 Console.Write("\n> ");
                 entry1._entryText = Console.ReadLine();
-                entry1.Display();
                 journal.AddEntry(entry1);
             }
             else if (number == 2)
