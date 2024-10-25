@@ -24,7 +24,6 @@ public class ListingActivity : Activity
         Console.Write("You may begin in: ");
         this.ShowCountDown(5);
         this.GetListFromUser();
-        _count = GetListFromUser().Count;
         Console.WriteLine($"You listed {_count} items!");
     }
     private void GetRandomPrompt()
@@ -46,8 +45,7 @@ public class ListingActivity : Activity
             Console.Write(">");
             string prompt = Console.ReadLine();
             _prompts.Add(prompt);
-            Console.WriteLine("");
-
+            _count++;
         }
         return listFromUser;
     }
