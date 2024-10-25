@@ -4,8 +4,8 @@ public class ListingActivity : Activity
     private List<string> _prompts;
     public ListingActivity()
     {
-        _name = "";
-        _description = "";
+        _name = "Listing Activity";
+        _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area";
         _date = 0;
         _count = 0;
         _prompts = new List<string>{
@@ -23,6 +23,7 @@ public class ListingActivity : Activity
         this.GetRandomPrompt();
         Console.Write("You may begin in: ");
         this.ShowCountDown(5);
+        Console.WriteLine("");
         this.GetListFromUser();
         Console.WriteLine($"You listed {_count} items!");
     }
