@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop06 World!");
+        SimpleGoal sgoal = new SimpleGoal("tgoal", "test goal", "10", true);
+        Console.WriteLine(sgoal.GetStringRepresentation());
+        Console.WriteLine(sgoal.GetDetailsString());
     }
 }
