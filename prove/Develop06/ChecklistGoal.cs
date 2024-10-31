@@ -5,7 +5,7 @@ public class ChecklistGoal : Goal
     private int _amountCompleted;
     private int _target;
     private int _bonus;
-    public ChecklistGoal(string shortName, string description, string points, int amountCompleted, int target, int bonus) : base(shortName, description, points)
+    public ChecklistGoal(string shortName, string description, int points, int amountCompleted, int target, int bonus) : base(shortName, description, points)
     {
         _amountCompleted = amountCompleted;
         _target = target;
@@ -20,11 +20,11 @@ public class ChecklistGoal : Goal
         int totalPoints = 0;
         if (_amountCompleted == _target)
         {
-            totalPoints = int.Parse(_points) + _bonus;
+            totalPoints = _points + _bonus;
         }
         else
         {
-            totalPoints = int.Parse(_points);
+            totalPoints = _points;
         }
         return totalPoints;
     }
@@ -37,8 +37,8 @@ public class ChecklistGoal : Goal
     {
 
         string detailsString = "";
-        // $"[ ] {_shortName} ({_description})";
-        if (_amountCompleted == _target)
+
+        if (_amountCompleted != _target)
         {
             detailsString = $"[ ] {_shortName} ({_description}) -- Currently completed:{_amountCompleted}/{_target}";
         }
@@ -50,7 +50,7 @@ public class ChecklistGoal : Goal
     }
     public override string GetStringRepresentation()
     {
-        string stringRepresentation = $"ChecklistGoal,{_shortName},{_description},{_points},{IsComplete()},{_amountCompleted},{_bonus}; ";
+        string stringRepresentation = $"ChecklistGoal:{_shortName},{_description},{_points},{IsComplete()},{_amountCompleted},{_target}{_bonus}";
         return stringRepresentation;
     }
 

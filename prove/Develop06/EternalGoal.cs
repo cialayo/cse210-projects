@@ -1,6 +1,6 @@
 public class EternalGoal : Goal
 {
-    public EternalGoal(string shortName, string description, string points) : base(shortName, description, points)
+    public EternalGoal(string shortName, string description, int points) : base(shortName, description, points)
     {
     }
     public override void RecordEvent()
@@ -18,7 +18,7 @@ public class EternalGoal : Goal
     }
     public override string GetStringRepresentation()
     {
-        string stringRepresentation = $"EternalGoal,{_shortName},{_description},{_points}, false";
+        string stringRepresentation = $"EternalGoal:{_shortName},{_description},{_points}, false";
         return stringRepresentation;
     }
 
